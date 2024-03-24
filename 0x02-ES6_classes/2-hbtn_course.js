@@ -9,14 +9,6 @@ export default class HolbertonCourse {
     return this._name;
   }
 
-  get length() {
-    return this._length;
-  }
-
-  get students() {
-    return this._length;
-  }
-
   set name(name) {
     if (typeof name === 'string') {
       this._name = name;
@@ -25,12 +17,20 @@ export default class HolbertonCourse {
     }
   }
 
+  get length() {
+    return this._length;
+  }
+
   set length(length) {
     if (typeof length === 'number') {
       this._length = length;
     } else {
       throw new TypeError('length must be  a number');
     }
+  }
+
+  get students() {
+    return this._length;
   }
 
   set students(students) {
