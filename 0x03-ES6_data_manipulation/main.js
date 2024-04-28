@@ -1,3 +1,12 @@
-import setFromArray from "./6-set.js";
-
-console.log(setFromArray([12, 32, 15, 78, 98, 15]));
+import getListStudents from './0-get_list_students'
+const students = getListStudents()
+console.log(students)
+const sanFranciscoStudents = students.filter((elem) => elem.location == 'San Francisco')
+console.log(sanFranciscoStudents)
+const names = students.map((elem) => `Mr ${elem.firstName}`)
+console.log(names)
+const idProduct = students.reduce((accumulator, elem) => accumulator * elem.id, 1)
+console.log(idProduct)
+students.forEach((elem) => console.log(`Mr ${elem.firstName}`))
+const James = students.find((elem) => elem.firstName == 'James')
+console.log(James)
